@@ -2,7 +2,10 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
-import db from './src/db/db.js';
+import { connectDB } from './src/config-database/connectDB.js';
+import 'express-async-errors';
+import { errorHandler } from './src/middlewares/errorHandler.js';
+import userRoute from './src/routes/user.route.js';
 
 const app = express();
 dotenv.config();
@@ -16,6 +19,14 @@ const corsOptions = {
   credentials: true,
 };
 app.use(cors(corsOptions));
+
+//routes
+app.use('/api/user/', userRoute);
+
+connectDB();
+
+//handErrorMiddleware
+app.use(errorHandler);
 
 const PORT = process.env.PORT;
 
