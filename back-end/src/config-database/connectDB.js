@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize');
+import Sequelize from 'sequelize';
 
 const sequelize = new Sequelize('jobportal', 'root', 'thongttdev', {
   host: '127.0.0.1',
