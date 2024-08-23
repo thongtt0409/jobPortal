@@ -2,9 +2,9 @@
   "name": "back-end",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "CommonJS",
+  "type": "commonjs",
   "scripts": {
-    "start:dev": "nodemon index.js"
+    "start": "nodemon --exec node_modules/.bin/babel-node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,11 +20,13 @@
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
     "mysql2": "^3.11.0",
+    "node-fetch": "^2.6.1",
     "nodemon": "^3.1.4",
     "sequelize": "^6.37.3",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.8",
     "@babel/core": "^7.25.2",
     "@babel/node": "^7.25.0",
     "@babel/preset-env": "^7.25.3",
