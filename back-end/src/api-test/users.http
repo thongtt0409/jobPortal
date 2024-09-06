@@ -1,11 +1,15 @@
 
 POST  http://localhost:8080/api/user/register
-content-type: application/json
+Content-type: application/json
 
 {
-   "fullName": "David Ngo",
-   "email":"davidNgo@gmail.com",
-   "phoneNumber":"0123456789",
-   "passWord":"123456"
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "firstName":"Thong",
+      "lastName": "Ton",
+      "address": "viet nam",
+      "phoneNumber": "0123123123",
+      "gender": 0,
+      "roleId": "1"
 }
 
